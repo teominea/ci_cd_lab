@@ -44,7 +44,7 @@ jobs:
       - name: Compile binary
         run: go build -o myapp
   
-    build:
+  build:
     # Specify the OS for the runner
     runs-on: ubuntu-latest
 
@@ -58,7 +58,7 @@ jobs:
     if: success()
 
     steps:
-      # Step 1: Checkout the repository code
+     # Step 1: Checkout the repository code
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -81,5 +81,5 @@ jobs:
         run: docker build -t ghcr.io/${{ github.repository }}:latest .
 
       # Step 5: Push the Docker image to GitHub Container Registry
-      - name: Push Docker image
-        run: docker push ghcr.io/${{ github.repository }}:latest
+        - name: Push Docker image
+          run: docker push ghcr.io/${{ github.repository }}:latest
