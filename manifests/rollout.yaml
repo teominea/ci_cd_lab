@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: webserver
-          image: ghcr.io/teominea/ci_cd_lab:latest
+          image: ghcr.io/teominea/ci_cd_lab:sha256:dc8c397130707bff943f9d80521fcfda84ded740ef8957423c3dbbb2ff369660
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
